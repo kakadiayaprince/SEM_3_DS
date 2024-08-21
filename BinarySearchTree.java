@@ -34,7 +34,7 @@ public class BinarySearchTree {
 
     boolean Search(int value) {
         return SearchRecord(root, value);
-       
+
     }
 
     boolean SearchRecord(TreeNode root, int value) {
@@ -58,8 +58,8 @@ public class BinarySearchTree {
     void PreorderTraversal(TreeNode root) {
         if (root != null) {
             System.out.print(root.value + " ");
-            InorderTraversal(root.left);
-            InorderTraversal(root.right);
+            PreorderTraversal(root.left);
+            PreorderTraversal(root.right);
         }
     }
 
@@ -85,8 +85,8 @@ public class BinarySearchTree {
 
     void PostorderTraversal(TreeNode root) {
         if (root != null) {
-            InorderTraversal(root.left);
-            InorderTraversal(root.right);
+            PostorderTraversal(root.left);
+            PostorderTraversal(root.right);
             System.out.print(root.value + " ");
         }
     }
